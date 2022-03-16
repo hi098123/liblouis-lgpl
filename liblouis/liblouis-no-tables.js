@@ -4405,7 +4405,7 @@ function copyTempDouble(ptr) {
             chunkSize = datalength = 1; // this will force getter(0)/doXHR do download the whole file
             datalength = this.getter(0).length;
             chunkSize = datalength;
-            console.log("LazyFiles on gzip forces download of the whole file when length is accessed");
+            //console.log("LazyFiles on gzip forces download of the whole file when length is accessed");
           }
   
           this._length = datalength;
