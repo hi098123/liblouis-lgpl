@@ -22,12 +22,16 @@
 
 # Created by Leon Ungier <Leon.Ungier@ViewPlus.com>.
 
+locale Sweden
+
 include se-se.dis
 
-space \x00a0 a
-include spaces.uti
-
 # ----------- define all chars --------------------------------------
+
+space \t 0 tab						#  9
+space \x000A 0
+space \x000D 0
+space \s 0 blank					# 32
 
 punctuation ! 235			exclamation mark		x0021
 punctuation " 56			double quote				x0022
@@ -45,6 +49,8 @@ punctuation - 36			hyphen-minus				x002D
 punctuation . 3				point								x002E
 math / 34							solidus							x002F
 
+include digits6Dots.uti
+
 punctuation : 25			colon								x003A
 punctuation ; 23			semicolon						x003B
 math < 246-3					less-than sign			x003C
@@ -54,9 +60,6 @@ punctuation ? 26			question mark				x003F
 sign @ 45-12356				commercial at				x0040
 
 include latinLetterDef6Dots.uti
-include digits6Dots.uti # must come after letters
-include litdigits6Dots.uti # Must come after letters
-
 
 punctuation [ 12356	left square bracket		x005B
 sign \\ 45-34				reverse solidus				x005C
@@ -71,6 +74,7 @@ punctuation { 6-236	left curly bracket		x007B
 sign | 456					vertical line					x007C
 punctuation } 6-356	right curly bracket		x007D
 math ~ 45-2					tilde									x007E
+space \X00A0 0			no-break space				x00A0
 sign ¢ 4-14					cent sign							x00A2
 sign £ 45-123				pound sign						x00A3
 sign ¤ 45-15				currency sign					x00A4
@@ -89,16 +93,16 @@ math ¼ 6-16-34-1456		vulgar fraction 1 quarter		x00BC
 math ½ 6-16-34-126		vulgar fraction one half		x00BD
 math ¾ 6-126-34-1456	vulgar fraction 3 quarters	x00BE
 
-lowercase \x00E0 12356			A with grave
-lowercase ä 345							a with diaeresis
-lowercase å 16										A with ring above
-lowercase \x00E8	2346			E with grave above
-lowercase é 123456								E with acute above
+uplow \x00C0\x00E0 12356			A with grave				x00C0
+uplow Ää 345							a with diaeresis		x00C4
+uplow Åå 16										A with ring above		x00C5
+uplow \x00C8\x00E8	2346			E with grave above	x00C8
+uplow Éé 123456								E with acute above	x00C9
 
-lowercase ö 246
+uplow Öö 246																			x00D6
 math × 1346						multiplication sign					x00D7
 
-lowercase ü 1256-1256						U with diaeresis
+uplow Üü 1256-1256						U with diaeresis		x00DC
 
 math ÷ 34							division sign								x00F7
 
@@ -116,16 +120,7 @@ punctuation	\x201F 56		# 8223			smart double high reverse quotation mark
 punctuation \x2026 3-3-3 # 8230			smart ellipsis
 
 sign \x20AC 15-136-1235-135					Euro sign
-noback sign \x25CF 35	# 9679 black circle
-
-# Uppercase letters
-base uppercase \x00C0 \x00E0	A with grave				x00C0
-base uppercase Ä ä	a with diaeresis		x00C4
-base uppercase Å å	A with ring above		x00C5
-base uppercase \x00C8 \x00E8		E with grave above	x00C8
-base uppercase É é	E with acute above	x00C9
-base uppercase Ö ö	x00D6
-base uppercase Ü ü	U with diaeresis		x00DC
+noback sign \X25CF 35	# 9679 black circle
 
 # -----------------------
 

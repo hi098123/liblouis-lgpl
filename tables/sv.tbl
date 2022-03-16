@@ -1,7 +1,4 @@
-#-index-name: Swedish
-#-display-name: Swedish braille
-
-#+language:sv
+#+locale:sv
 #+type:literary
 #+grade:1
 

@@ -1,11 +1,10 @@
-#tsn#1#Tswana Uncontracted#za#
-# liblouis: Afrikaans Braille Code (Grade 1)
+# liblouis Table for Post-Translation Editing
 #
-#  Copyright (C) 2014, Greg Kearney <gkearney@gmail.com>
+#  Based on the Linux screenreader BRLTTY, copyright (C) 1999-2006 by
+#  The BRLTTY Team
 #
-# Based on English UEB Grade 1
-#
-# Used to display symbols, Unicode chars and other symbols used throughout UEB code.
+#  Copyright (C) 2004-2008 ViewPlus Technologies, Inc. www.viewplus.com
+#  Copyright (C) 2004-2006 JJB Software, Inc. www.jjb-software.com
 #
 #  This file is part of liblouis.
 #
@@ -23,10 +22,24 @@
 #  License along with liblouis. If not, see
 #  <http://www.gnu.org/licenses/>.
 
-include en-ueb-g1.ctb
+include ukmaths_single_cell_defs.cti
 
-# Tswana specific
+math \x0001 56
+math \x0002 45
+math \x0003 56
+math \x0004 45
+repeated \s 0
+always \ee\s`4 6-256
+always \ee\s`1 6
+always \ee\s`3 6-25
+always \ee\s`2 6-23
+always `7\s\eb 12356
+always \ee\s`7 23456
+always "\s 0
+always \s,\s 6-0
+# context "\eb"[]$l"\ee" @56
+# context "\eb"[]","$l"\ee" @56
 
-uplow	Êê	45-15
-uplow	Ȏô	45-135
-uplow	Šš	4-234
+noback pass2 @1b-12 ?
+noback pass2 @1b-15 ?
+noback pass2 @1b-12-4-4 @4

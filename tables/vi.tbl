@@ -1,6 +1,6 @@
-#+locale:sa
-#+type:literary
-#+grade:1
+#+locale:vi
+#+type:computer
+#+dots:8
 
 # TODO: Please correct the metadata above. It is not meant to be
 # accurate nor complete. It hasn't been verified by the table
@@ -11,6 +11,5 @@
 # the implemented braille code. Preferably submit the documents
 # to https://github.com/liblouis/braille-specs.
 
-include spaces.ctb
-include sa-in-g1.utb
+include vi.ctb
 include braille-patterns.cti
