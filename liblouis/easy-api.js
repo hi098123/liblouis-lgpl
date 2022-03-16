@@ -320,9 +320,9 @@ IMPL.worker = {
 	getFilesystem: function() { throw new Error("cannot get filesystem of async liblouis instance"); },
 
 	enableOnDemandTableLoading: function(url, fn) {
-		if(IS_BROWSER_GUI_THREAD) {
-			url = window.location.origin + "/" + url;
-		}
+		//if(IS_BROWSER_GUI_THREAD) {
+		//	url = window.location.origin + "/" + url;
+		//}
 
 		fn = fn || NOOP;
 		dispatch(this, "enableOnDemandTableLoading", [url, fn]);
@@ -387,18 +387,18 @@ function LiblouisEasyApiAsync(opts) {
 		self.resolveDispatch(e.data);
 	});
 
-	var prefix = "";
+	//var prefix = "";
 
-	if(IS_BROWSER_GUI_THREAD) {
-		prefix = window.location.origin + "/";
-	}
+	//if(IS_BROWSER_GUI_THREAD) {
+	//	prefix = window.location.origin + "/";
+	//}
 
 	this.worker.postMessage({
 		cmd: "init",
 		callId: 0,
 		data: {
-			capi: prefix + opts.capi,
-			easyapi: prefix + opts.easyapi
+			capi: opts.capi,
+			easyapi: opts.easyapi
 		}
 	});
 }
