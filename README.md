@@ -3,4 +3,7 @@ liblouis-js에서 lgpl부분만 남기고 제거, table은 https://www.npmjs.com
 
 # 수정사항
 ## easy-api.js
-323-325, 390-394 주석처리, 400-401 prefix 변수 제거
+- 323-325, 390-394 주석처리, 400-401 prefix 변수 제거
+
+## liblouis-no-tables.js
+4361,4408 "Content-Encoding" 관련 수정
