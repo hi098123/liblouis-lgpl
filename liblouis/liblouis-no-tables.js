@@ -4358,7 +4358,7 @@ function copyTempDouble(ptr) {
           var datalength = Number(xhr.getResponseHeader("Content-length"));
           var header;
           var hasByteServing = (header = xhr.getResponseHeader("Accept-Ranges")) && header === "bytes";
-          var usesGzip = (header = xhr.getResponseHeader("Content-Encoding")) && header === "gzip";
+          var usesGzip = 1;//(header = xhr.getResponseHeader("Content-Encoding")) && header === "gzip";
   
           var chunkSize = 1024*1024; // Chunk size in bytes
   
