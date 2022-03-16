@@ -1,6 +1,8 @@
-#+locale:ml
+#+locale:nl-BE
 #+type:literary
-#+grade:1
+#+contraction:no
+#+grade:0
+#+hyphenation:yes
 
 # TODO: Please correct the metadata above. It is not meant to be
 # accurate nor complete. It hasn't been verified by the table
@@ -11,6 +13,6 @@
 # the implemented braille code. Preferably submit the documents
 # to https://github.com/liblouis/braille-specs.
 
-include spaces.ctb
-include ml-in-g1.utb
+include nl-BE-g0.utb
+include hyph_nl_NL.dic
 include braille-patterns.cti
